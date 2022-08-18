@@ -3,6 +3,9 @@ setURL('https://join.pascal-steffen.com/smallest_backend_ever');
 
 let users = [];
 let currentUser = [];
+let red = 'alert-text-design-red';
+let green = 'alert-text-design-green';
+
 
 /**
  * Load all Users for the login.
@@ -173,8 +176,11 @@ async function createUser() {
 
     if (isAdmin.checked == false) {
         noAdmin(cryptUserName, cryptEmail, cryptPassword);
+        showAlert(green, 'A new user has been created.')
+        
     } else {
         admin(cryptUserName, cryptEmail, cryptPassword);
+        showAlert(green, 'A new user was created as admin.')
     }
 
     userName.value = "";
@@ -232,6 +238,7 @@ async function admin(cryptUserName, cryptEmail, cryptPassword) {
  * 
  */
 async function deleteUsers(i) {
+    showAlert(green,'The user has been deleted from the database.');
     users.splice(i, 1);
     await backend.setItem('user', JSON.stringify(users));
     showAllUsers();
@@ -243,9 +250,33 @@ async function deleteUsers(i) {
  * @param {number} i 
  */
 async function changedPwInPanel(i) {
-    users[i]['changePassword'] = true;
-    await backend.setItem('user', JSON.stringify(users));
-    showAllUsers();
+    if (users[i]['changePassword'] == true) {
+        await showAlert(red, 'The password must be changed at the next login.');
+    } else if (users[i]['changePassword'] == false) {
+        await showAlert(green,'The user can change his password the next time he logs in.');
+        users[i]['changePassword'] = true;
+        await backend.setItem('user', JSON.stringify(users));
+        showAllUsers();
+    }
+}
+
+
+/**
+ * show the alerts in green or red.
+ * @param {string} color 
+ * @param {string} text 
+ */
+async function showAlert(color, text) {
+    document.getElementById("alertText").classList.add(`${color}`);
+    document.getElementById("alertText").innerHTML = `${text}`;
+    document.getElementById("alertText").classList.remove('d-none');
+    document.getElementById("alertText").classList.add('transform-back');
+    setTimeout(() => {
+        document.getElementById("alertText").classList.remove('transform-back');
+        setTimeout(() => {
+            document.getElementById("alertText").classList.add('d-none');
+        }, 250);
+    }, 4000);
 }
 
 

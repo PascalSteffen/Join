@@ -110,7 +110,7 @@ async function taskPushToAllTask(task) {
  * 
  */
 function openBoard() {
-    window.location.href = "https://join.pascal-steffen.com/board.html";
+    window.location.href = "https://join.pascal-steffen.com/backlog.html";
 }
 
 

@@ -36,22 +36,27 @@
         </div>
         <div class=" addTask content-bg">
             <form onsubmit="createdTask(); return false">
+
                 <div class="inputFielder">
-                    <h2 class="w-50 fs-5 fw-bold text-primary">Title</h2>
+                    <h2 class="w-50 fs-5 fw-bold text-primary">TITLE</h2>
                     <input required type="text" placeholder="Managent meeting prepartaion" name="" id="title">
                 </div>
                 <div class="inputFielder">
-                    <h2 class="w-50 fs-5 fw-bold text-primary"> DUE DATE</h2>
-                    <input required type="date" value="2022-08-04" name="" id="date">
-                </div>
-
-                <div class="inputFielder">
-                    <h2 class="w-50 fs-5 fw-bold text-primary">Categorie</h2>
+                    <h2 class="w-50 fs-5 fw-bold text-primary">CATEGORIE</h2>
                     <select id="categorie" size="1">
                         <option>Sale</option>
                         <option>Product</option>
                         <option>Marketing</option>
                     </select>
+                </div>
+                <div class="inputFielder">
+                    <h2 class="w-50 fs-5 fw-bold text-primary">DESCRIPTION</h2>
+                    <textarea required name="" cols="50" id="description"></textarea>
+                </div>
+
+                <div class="inputFielder">
+                    <h2 class="w-50 fs-5 fw-bold text-primary"> DUE DATE</h2>
+                    <input required type="date" value="2022-08-04" name="" id="date">
                 </div>
                 <div class="inputFielder">
                     <h2 class="w-50 fs-5 fw-bold text-primary">URGENCY</h2>
@@ -61,29 +66,28 @@
                         <option>LOW</option>
                     </select>
                 </div>
-                <div class="inputFielder">
-                    <h2 class="w-50 fs-5 fw-bold text-primary">DESCRIPTION</h2>
-                    <textarea required name="" cols="50" id="description"></textarea>
-                </div>
-
                 <div class="inputFielder assignedContainer">
-                    <h2 class="fs-5 fw-bold text-primary">ASSIGNED TO: <span id="AssignedName"></span> </h2>
-                    <div class="assign-to-design"><img class="avatar" src="img/icon plus.png" onclick="EmployeePicker()"
-                            alt="">
-                        <div class="all-users-design">
-                            <ul id="NameFromEmployess"></ul>
-                        </div>
-                        <div class="buttons">
-                            <a href="addTask.html">
-                                <p class="cancelButton">CANCEL</p>
-                            </a>
-                            <button disabled id="createdButton" class="createButton">CREATE TASK</button>
+                    <div>
+                        <h2 class="fs-5 fw-bold text-primary">ASSIGNED TO: <span id="AssignedName"></span> </h2>
+                        <div class="assign-to-design"><img class="avatar" src="img/icon plus.png"
+                                onclick="EmployeePicker()" alt="">
+                            <div class="all-users-design">
+                                <ul id="NameFromEmployess"></ul>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="buttons">
+                        <p onclick="blankForm()" class="cancelButton">CANCEL</p>
+                        <button id="createdButton" class="createButton">CREATE TASK</button>
+                    </div>
                 </div>
-            </form>
+
         </div>
+        </form>
     </div>
+    </div>
+    <p id="alertText" class="d-none">Alert-Text</p>
 
 </body>
 

@@ -123,6 +123,7 @@ async function deleteTaskOnBoard(i) {
     await backend.deleteItem('allTask');
     loadAllFilter();
     saveUserOnTheBord();
+    showAlert(red, 'The task has been removed from the board.');
 }
 
 
