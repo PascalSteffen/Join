@@ -456,6 +456,14 @@ body {
     margin-top: 20px;
 }
 
+.header-impressum-datenschutz h1 {
+    font-size: 30px;
+}
+
+.header-impressum-datenschutz h2 {
+    font-size: 24px;
+}
+
 
 /*HELP*/
 
