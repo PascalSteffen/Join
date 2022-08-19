@@ -20,7 +20,10 @@ async function includeHTML() {
     }
 }
 
-
+/**
+ * disable the Menu on the privacy and imprint side.
+ * 
+ */
 function legacyTurn() {
     if (window.location.href == 'https://join.pascal-steffen.com/privacy.html' || window.location.href == 'https://join.pascal-steffen.com/imprint.html') {
         document.getElementById("responsive").classList.add('d-none');
@@ -33,6 +36,11 @@ function legacyTurn() {
     }
 }
 
+
+/**
+ * Immediately prevents login
+ * 
+ */
 function noLogin() {
     if (currentUser.length == 0) {
         document.location.href = 'https://join.pascal-steffen.com/';

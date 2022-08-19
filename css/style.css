@@ -144,6 +144,29 @@ body {
     text-overflow: ellipsis;
 }
 
+.backlog-btn {
+    background-color: rgba(30, 49, 144, 0.7);
+    transition: all 225ms ease-in-out;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.backlog-btn:hover {
+    background-color: rgba(30, 49, 144, 1);
+    transition: all 225ms ease-in-out;
+}
+
+.buttonPosition {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    width: 100%;
+}
+
 
 /* Login */
 
@@ -591,7 +614,10 @@ body {
         padding-left: 32px !important;
         padding-right: 32px !important;
     }
-
+    
+    .buttonPosition {
+        flex-direction: column;
+    }
 
 }
 
