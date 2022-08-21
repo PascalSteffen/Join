@@ -41,8 +41,8 @@ function legacyTurn() {
  * Immediately prevents login
  * 
  */
-function noLogin() {
+/* function noLogin() {
     if (currentUser.length == 0) {
         document.location.href = 'https://join.pascal-steffen.com/';
     }
-}
+} */
