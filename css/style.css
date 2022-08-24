@@ -194,6 +194,23 @@ body {
     border-radius: 10px;
 }
 
+.simple-login-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 2.5%;
+}
+
+.simple-login-container button {
+    border-radius: 0;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    padding-right: 20px;
+    text-align: start;
+}
+
 
 /* Admin-Panel */
 
@@ -489,6 +506,27 @@ body {
         margin-top: 100px;
         margin-left: 0 !important;
     }
+
+    .simple-login-container {
+        display: flex;
+        align-items: center;
+        flex-direction: unset;
+        position: absolute;
+        left: 0;
+        top: 0%;
+        right: 0;
+    }
+
+    .simple-login-container button {
+        border-radius: 10px !important;
+        text-align: center;
+        font-size: 16px;
+        padding-right: 10px;
+    }
+
+    .rs-admin {
+        margin-right: 1rem;
+    }
 }
 
 @media (max-width: 950px) {
@@ -583,9 +621,8 @@ body {
     #extras {
         display: flex;
         align-items: center;
-        flex-direction: column;
         justify-content: center;
-        margin-top: 0 !important;
+
     }
 
     .line {
@@ -593,7 +630,10 @@ body {
     }
 
     .extra {
-        margin-right: 0 !important;
         margin-bottom: 0.25rem;
+    }
+
+    .simple-login-container button {
+        font-size: 12px;
     }
 }

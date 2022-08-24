@@ -281,6 +281,37 @@ async function showAlert(color, text) {
 
 
 /**
+ * testlogin function as Admin
+ * 
+ */
+function loginAsAdmin() {
+    window.location.href = "https://join.pascal-steffen.com/board.html";
+    let NewcurrentUser = {
+        'name': 'Admin',
+        'email': 'Admin@hotmail.com',
+        'isAdmin': true
+    }
+    currentUser.push(NewcurrentUser);
+    saveToLocalStorage();
+}
+
+
+/**
+ * testlogin function as Testuser
+ * 
+ */
+function loginAsUser() {
+    window.location.href = "https://join.pascal-steffen.com/board.html";
+    let NewcurrentUser = {
+        'name': 'TestUser',
+        'email': 'Testuser@hotmail.com',
+        'isAdmin': false
+    }
+    currentUser.push(NewcurrentUser);
+    saveToLocalStorage();
+}
+
+/**
  * login-Function
  * 
  */

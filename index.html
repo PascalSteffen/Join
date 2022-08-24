@@ -18,6 +18,10 @@
 
 <body onload="loadDataBase()" class="flex-center">
     <img class="img-design" src="img/background.jpg" alt="">
+    <div class="simple-login-container">
+        <button onclick="loginAsAdmin()" class="login-btn-design my-3 rs-admin">Login as Admin</button>
+        <button onclick="loginAsUser()" class="login-btn-design my-3">Login as User</button>
+    </div>
     <div class="login-container">
         <h1 class="mb-3"><b>Login</b></h1>
         <form id="loginScreen" onsubmit="login(); return false;" class="form-design">
