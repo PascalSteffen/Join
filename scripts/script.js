@@ -284,7 +284,7 @@ async function showAlert(color, text) {
  * testlogin function as Admin
  * 
  */
-function loginAsAdmin() {
+ function loginAsAdmin() {
     window.location.href = "https://join.pascal-steffen.com/board.html";
     let NewcurrentUser = {
         'name': 'Admin',
@@ -310,6 +310,7 @@ function loginAsUser() {
     currentUser.push(NewcurrentUser);
     saveToLocalStorage();
 }
+
 
 /**
  * login-Function
