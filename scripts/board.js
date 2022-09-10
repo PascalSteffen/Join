@@ -69,7 +69,7 @@ function loadAllFilter() {
 function filterTodoTask(currentToDo) {
     for (let i = 0; i < currentToDo.length; i++) {
         let index = currentToDo[i];
-        
+
         document.getElementById('todo').innerHTML += htmlTicket(i, index);
         trashClose(i, index);
         console.log(index);

@@ -13,7 +13,8 @@
     padding-right: 15px;
 }
 
-.headline-assigned-to-category { /*Headline und Template*/
+.headline-assigned-to-category {
+    /*Headline und Template*/
     width: 48%;
     display: flex;
     justify-content: space-between;

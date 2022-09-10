@@ -66,7 +66,7 @@
     margin-bottom: 20px;
     font-size: 18px;
     background-color: white;
-    box-shadow: -2px 0px 6px 0px rgba(0,0,0,0.21);
+    box-shadow: -2px 0px 6px 0px rgba(0, 0, 0, 0.21);
 }
 
 .ticket:hover {
@@ -81,7 +81,8 @@
 
 .trash-img:hover {
     cursor: pointer;
-    fill: rgba(30, 49, 144, 1);;
+    fill: rgba(30, 49, 144, 1);
+    ;
     transform: scale(1.2);
 }
 

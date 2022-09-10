@@ -177,7 +177,7 @@ async function createUser() {
     if (isAdmin.checked == false) {
         noAdmin(cryptUserName, cryptEmail, cryptPassword);
         showAlert(green, 'A new user has been created.')
-        
+
     } else {
         admin(cryptUserName, cryptEmail, cryptPassword);
         showAlert(green, 'A new user was created as admin.')
@@ -238,7 +238,7 @@ async function admin(cryptUserName, cryptEmail, cryptPassword) {
  * 
  */
 async function deleteUsers(i) {
-    showAlert(green,'The user has been deleted from the database.');
+    showAlert(green, 'The user has been deleted from the database.');
     users.splice(i, 1);
     await backend.setItem('user', JSON.stringify(users));
     showAllUsers();
@@ -253,7 +253,7 @@ async function changedPwInPanel(i) {
     if (users[i]['changePassword'] == true) {
         await showAlert(red, 'The password must be changed at the next login.');
     } else if (users[i]['changePassword'] == false) {
-        await showAlert(green,'The user can change his password the next time he logs in.');
+        await showAlert(green, 'The user can change his password the next time he logs in.');
         users[i]['changePassword'] = true;
         await backend.setItem('user', JSON.stringify(users));
         showAllUsers();
@@ -284,7 +284,7 @@ async function showAlert(color, text) {
  * testlogin function as Admin
  * 
  */
- function loginAsAdmin() {
+function loginAsAdmin() {
     window.location.href = "https://join.pascal-steffen.com/board.html";
     let NewcurrentUser = {
         'name': 'Admin',
